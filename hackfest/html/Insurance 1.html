@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             nav {
+                background-color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            li {
+                margin: 0 10px;
+            }
+
+            a {
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+              text-decoration: underline;
+            }
+
+            .nav-button-left,
+            .nav-button-right {
+                background-color: #fff;
+                color: #333;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .nav-button-left:hover,
+            .nav-button-right:hover {
+                background-color: #ccc;
+            }
+
+            .nav-container {
+            border-bottom: 1px solid #00933d;
+            padding: 8px;
+            }
+
+            .space {
+                color: white;
+            }
+
+            .block {
+                display: block;
+                width: 100%;
+                border: none;
+                background-color: #04AA6D;
+                padding: 14px 28px;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .button1 {border-radius: 5px;}
+
+            .dropbtn {
+                background-color: white;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropbtn:hover, .dropbtn:focus {
+            background-color: white;
+            }
+
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #ddd;}
+
+            .show {display:block;}
+        </style>
+    </head>
+
+    <body>
+        <nav class="nav-container">
+            <a href="index.html"><input type="image" src="../media/HouseIcon.png" alt="Submit" width="25" height="25"></a>
+            
+            <ul>
+                <li><a href="#"><img src = "../media/Name.png" style = "width: 120px; height: 40px;"></a></li>
+            </ul>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><img src="../media/MenuIcon.png" width="20"></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="Experts.html">Experts</a>
+                    <a href="Rewards.html">Rewards</a>
+                  </div>
+            </div>
+        </nav>
+
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+
+        <img src="../media/Ins1.1.png" width=95%>
+
+        <p class = "space">s</p>
+        <p class = "space">s</p>
+        <img src="../media/Ins1.2.png" width=100%>
+
+            <div class="space">
+                <p> s</p>
+                <p> s</p>
+                <p>s </p>
+                <p>s </p>
+                <p>s </p>
+                <p>s </p>
+                <p>s </p>
+                <p>s </p>
+            </div>
+
+        <a href="Experts.html"><input type="image" src="../media/Ins1.3.png" alt="Submit" width=100%></a>
+
+        <p class = "space">s</p>
+        <p class = "space">s</p>
+
+        <a href=""><button type="button" class="block button1">Buy now</button></a>
+    </body>
+</html>

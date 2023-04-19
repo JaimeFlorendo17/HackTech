@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      nav {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      li {
+        margin: 0 10px;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .nav-button-left,
+      .nav-button-right {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .nav-button-left:hover,
+      .nav-button-right:hover {
+        background-color: #ccc;
+      }
+
+      .nav-container {
+        border-bottom: 1px solid #00933d;
+        padding: 8px;
+      }
+
+      .button {
+        background-color: #999; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 1000px;
+      }
+
+      .button1 {border-radius: 12px}
+
+      .buttons {
+        width: 200px;
+        height: 30px;
+        margin: 0 auto;
+        display: inline;
+      }
+
+      .action_btn {
+        width: 200px;
+        height: 30px;
+        margin: 0 auto;
+        display: inline;}
+
+        .dropbtn {
+          background-color: white;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: white;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .show {display:block;}
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav-container">
+      <input type="image" src="../media/HouseIcon.png" alt="Submit" width="25" height="25">
+      <ul>
+        <li><a href="#"><img src = "../media/Name.png" style = "width: 120px; height: 40px;"></a></li>
+      </ul>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><img src="../media/MenuIcon.png" width="20"></button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="Experts.html">Experts</a>
+            <a href="Rewards.html">Rewards</a>
+          </div>
+    </div>
+    </nav>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+  </script>
+    <p></p>
+
+    <img src="../media/Intro.png" width=80%>
+    <img src="../media/HackFest.png" height = "800" width = 100%>
+    <a href="Rewards.html"><button class="button button1" width =100%>Avail your vouchers here</button></a>
+
+    <h1>Plans for you</h1>
+
+    <div class="buttons">
+      <div class="action_btn">
+
+        <button name="submit" class="action_btn button1" type="submit" value="Save" onclick="myFunction()" style="background-color: white;">Education</button>
+        <button name="submit" class="action_btn button1" type="submit" value="Cancel" onclick="myFunction2()" style="background-color: white;">Life</button>
+
+        <p id="saved"></p>
+      </div>
+    </div>
+        
+    <img src="../media/Progress bar.png" width =100%>
+    <a href="Insurance 1.html"><input type="image" src="../media/Insurance1.png" alt="Submit" width=100%></a>
+    <a href="Insurance 2.html"><input type="image" src="../media/Insurance2.png" alt="Submit" width=100%></a>
+  </body>
+</html>  
